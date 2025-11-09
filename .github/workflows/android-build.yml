@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y openjdk-17-jdk unzip wget git build-essential python3-venv python3-distutils
+          sudo apt-get install -y openjdk-17-jdk unzip wget git build-essential python3-venv
           python3 -m venv venv
           source venv/bin/activate
           pip install --upgrade pip
-          pip install buildozer cython
+          pip install setuptools wheel buildozer cython
 
       - name: Build APK
         run: |
