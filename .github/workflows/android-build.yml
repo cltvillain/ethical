@@ -28,7 +28,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y unzip wget git build-essential python3-venv openjdk-17-jdk
+          sudo apt-get install -y unzip wget git build-essential python3-venv openjdk-17-jdk tar curl
 
       - name: Install Android SDK command-line tools
         run: |
