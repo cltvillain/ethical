@@ -38,22 +38,4 @@ jobs:
           unzip cmdline-tools.zip
           mv cmdline-tools latest
           yes | sdkmanager --sdk_root=$ANDROID_HOME --licenses
-          sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "platforms;android-33" "build-tools;33.0.2"
-
-      - name: Set up Python venv and Buildozer
-        run: |
-          python3 -m venv venv
-          source venv/bin/activate
-          pip install --upgrade pip
-          pip install setuptools wheel cython buildozer
-
-      - name: Build APK
-        run: |
-          source venv/bin/activate
-          buildozer android debug
-
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: sharecontactsisa-apk
-          path: bin/*.apk
+          sdkmanager --sdk_roo_
